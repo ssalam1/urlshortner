@@ -14,8 +14,8 @@ class Migration(migrations.Migration):
             name='urldata',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('url', models.URLField()),
-                ('url_short', models.SlugField()),
+                ('url', models.CharField(max_length=200)),
+                ('url_short', models.SlugField(unique=True)),
             ],
         ),
     ]
