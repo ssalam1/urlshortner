@@ -3,8 +3,8 @@ from django import forms
 
 # Create your models here.
 class urldata(models.Model):
-	url=models.CharField(max_length=200, null=False)
-	url_short=models.SlugField(unique=True)
+	url=models.CharField(max_length=200, blank=False,null=False)
+	url_short=models.SlugField(unique=True,null=False,blank=False)
 
 	"""docstring for urldata"models.Model """
 class urlform(forms.ModelForm):
@@ -12,4 +12,3 @@ class urlform(forms.ModelForm):
 	class Meta:
 		model = urldata
 		fields=['url']
-		

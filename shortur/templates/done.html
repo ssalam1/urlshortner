@@ -1,5 +1,7 @@
 {% extends "index.html" %}
 {% block content %}
 <h2>Done!!</h2>
-<h3><a href ='/form.html'>Click Here</a>to add another </h3>
+<h3> Here is your short url :- <a href="/{{ newurl.url_short }}"> localhost:8000/{{newurl.url_short}} </h3>
+
+<h3><a href ='/'>Click Here</a>to add another </h3>
 {% endblock %}
