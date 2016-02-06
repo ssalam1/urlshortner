@@ -1,20 +1,8 @@
 {% extends "index.html" %}
 
 {% block content %}
-<h3> Paste your url</h3>
-<script type="text/javascript">
-   function required(inputtx)   
-   {  
-     if (inputtx.value.length == 0)  
-      {   
-         alert("message");        
-         return false;   
-      }       
-      return true;   
-    } 
- </script>
-<form onsubmit="required()" method ="post"  > {% csrf_token %}
+<form onsubmit="required()" method ="post" class="form" id="form"  > {% csrf_token %}
 	{{ form.as_p }}
-	<button type= "Submit"> Save </button>
+	<button id ="save" class="btn"type= "Submit"> Short it! </button>
 </form>
 {% endblock %}

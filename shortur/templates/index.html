@@ -1,18 +1,27 @@
+<link rel="stylesheet" href="/static/css/base.css">
 <html>
 
-	
-	<h1>Hello Welcome to Shortur!</h1>
-	<h2>Shorten your URL</h2>
-		
-	<div id="content">
-		{% block content %} {%endblock%}
-	</div>
-	{% block home %}
-	<div id="home">
-			
-	</div>
+<h1>Hello Welcome to Shortur!</h1>
+<h2>Shorten your URL</h2>
+{% if messages %}
+<div class="error">
+    <ul class="messages">
+        {% for message in messages %}
+        <p id="error"{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </p>
+</div>
+{% endif %}
+        <div id="content">
+            {% block content %} {%endblock%}
+            {% block home %}
+        <div id="home">
+
+        </div>
 	{% endblock %}
 	
-	
+	<footer>
 	<h3> It is powered by Django !</h3>
+	<h4 style="color:green;">Designed by Shadab</h4>
+</footer>
 </html>

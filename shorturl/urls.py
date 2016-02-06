@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$','shortur.views.index'),
-    url(r'^(?P<short_id>\w{0,6})$', 'shortur.views.redirect_org', name='redirectoriginal'),
+    url(r'^(?P<short_id>\w{3,6})$', 'shortur.views.redirect_org', name='redirectoriginal'),
+    url(r'^','shortur.views.notfound'),
 ]

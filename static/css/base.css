@@ -1,0 +1,57 @@
+html{
+    
+    margin: 20px;
+	font-family: Cambria,Georgia,serif;
+    background-image: url(/static/img/image.jpg);
+}
+h1{
+    font-family: sans-serif;
+    font-size-adjust: auto;
+    padding: 10px;
+    align-content: center;
+    font-size: 2em;
+    color: aqua;
+    
+}
+h3#ref >a:hover{
+    color: red;
+}
+h3#ref > a {
+    text-decoration: none;
+    display: inline-block;
+    color: grey;
+    text-align: center;
+    align-content: center;
+    margin: 20px 10px 1px 60px;
+    font-weight: bold;
+    font-size: 28px;
+    
+}
+#copy-btn:hover{
+    color: 4CAF50;
+    background-color: white;
+}
+#copy-btn{
+    
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-left: 100px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    cursor: pointer;
+}
+#twitter-widget-0{
+    display: inline;
+    margin-top: 20px;
+    margin-left: 130px;
+    font-size: 60px;
+}
+.fb-share-button {
+    display: block;
+    margin-top: 10px; 
+    margin-left: 130px;
+}

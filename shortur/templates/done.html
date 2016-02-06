@@ -1,7 +1,38 @@
 {% extends "index.html" %}
+{% load static %}
 {% block content %}
-<h2>Done!!</h2>
-<h3> Here is your short url :- <a href="/{{ newurl.url_short }}"> localhost:8000/{{newurl.url_short}} </h3>
+<script type="text/javascript" src="static/js/clipboard.min.js"></script>
+<h3 id="ref"> Here is your short url <br><a href="/{{ newurl.url_short }}"> localhost:8000/{{newurl.url_short}}</a> </h3>
+		<button class="btn" id="copy-btn" data-clipboard-text="localhost:8000/{{newurl.url_short}}">
+		Copy to Clipboard
+		</button>
+		<a href="https://twitter.com/share" class="twitter-share-button" data-url=null data-text= "localhost:8000/{{newurl.url_short}} " data-		size="large">
+			Tweet
+		</a>
+	<div id="fb-root"></div>
+    		<div class="fb-share-button" data-href="https://localhost:8000/&#123;&#123;newurl.url_short&#125;&#125;" data-layout="icon_link">
+		</div>
+<h3 ><a href ='/' id="home">Click Here </a>to add another </h3>
+<script>
+//For the Copying to the clipboard
+(
+	function(){
+    new Clipboard('#copy-btn');
+}
+)();
 
-<h3><a href ='/'>Click Here</a>to add another </h3>
+//For the facebook sahre button
+(
+	function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk')
+);
+
+//For the twitter's tweet button
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
 {% endblock %}
