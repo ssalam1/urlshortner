@@ -8,7 +8,6 @@ from django.shortcuts import redirect
 from django.contrib import messages 
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
-import re
 # Create your views here.
 arr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
@@ -44,5 +43,3 @@ def redirect_org(request,short_id):
 	current_url= get_object_or_404(urldata,url_short=short_id) # get object, if not found return 404 error
  	orgurl=current_url.url
  	return redirect(orgurl)
- 
-  

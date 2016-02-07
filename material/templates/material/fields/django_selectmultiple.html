@@ -1,0 +1,16 @@
+{% load material_form material_form_internal %}
+
+{% render bound_field template='fields/django_select.html' %}
+    {% part field add_control_attr %}multiple{% endpart %}
+    {% part field add_group_class %}multiselect{% endpart %}
+    {% part field options %}
+        {% if not field|have_default_choice %}
+             <option value="" disabled selected>Choose your option</option>
+        {% endif %}
+        {% for value, choice in field.widget.choices %}
+        <option {% if value|force_text in bound_field.value %}selected="selected"{% endif %}
+                {% if value == None or value == '' %}style="display:none"{% endif %}
+                value="{{ value|default_if_none:"" }}" >{% if value == None or value == '' %}{{ form_select_empty_label|default:choice }}{% else %}{{ choice }}{% endif %} </option>
+        {% endfor %}
+    {% endpart %}
+{% endrender %}
