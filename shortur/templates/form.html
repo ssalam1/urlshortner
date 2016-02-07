@@ -1,8 +1,9 @@
 {% extends "index.html" %}
 
 {% block content %}
-<form onsubmit="required()" method ="post" class="form" id="form"  > {% csrf_token %}
-	{{ form.as_p }}
+{% load material_form %}
+<form onsubmit="required()" method ="post" id="form"  > {% csrf_token %}
+	{% form form=form %}{% endform %}
 	<button id ="save" class="btn"type= "Submit"> Short it! </button>
 </form>
 {% endblock %}

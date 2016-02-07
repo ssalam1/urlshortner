@@ -1,27 +1,27 @@
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
 <link rel="stylesheet" href="/static/css/base.css">
 <html>
-
-<h1>Hello Welcome to Shortur!</h1>
-<h2>Shorten your URL</h2>
-{% if messages %}
-<div class="error">
-    <ul class="messages">
-        {% for message in messages %}
-        <p id="error"{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </p>
-</div>
-{% endif %}
+    <body>
+        <h1>Welcome to Shortur!</h1>
+            <h2>Shorten your URL</h2>
+        {% if messages %}
+                <div class="error btn">
+                    <ul class="messages">
+                        {% for message in messages %}
+                        <p id="error text"  {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </p>
+                </div>
+        {% endif %}
         <div id="content">
             {% block content %} {%endblock%}
             {% block home %}
-        <div id="home">
-
-        </div>
-	{% endblock %}
+                <div id="home"></div>
+            {% endblock %}
+    </body>
 	
 	<footer>
-	<h3> It is powered by Django !</h3>
-	<h4 style="color:green;">Designed by Shadab</h4>
-</footer>
+	<h4>Designed by Shadab</h4>
+    </footer>
 </html>

@@ -2,8 +2,9 @@ html{
     
     margin: 20px;
 	font-family: Cambria,Georgia,serif;
-    background-image: url(/static/img/images.jpg);
+    background-image: url(/static/img/bird.jpg);
     background-attachment: scroll;
+    background-size: cover;
 
 }
 h1{
@@ -80,25 +81,29 @@ h3#ref > a {
     margin-top: 10px; 
     margin-left: 140px;
 }
+label[for="id_url"] {
+   font-size: 2em;
+}
 #form > p{
+    font: "URW Chancery L";
     display: block;
-    color:darkred;
     margin-top: :10px;
     margin-bottom: 5px;
     margin-left: 20px;
     font-weight: bold;
     font-size: 28px;
 }
+
 #id_url{
+    font-size: 1.5em;
+    color: #F27935;
     width: 65%;
     padding: 10px 20px;
-    margin-top: 5px;
+    margin-top: 50px;
     margin-left: 0;
     display: block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
 }
+
 .error{
 			font-size: .75em;
             width: 35%;
