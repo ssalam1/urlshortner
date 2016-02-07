@@ -2,36 +2,61 @@ html{
     
     margin: 20px;
 	font-family: Cambria,Georgia,serif;
-    background-image: url(/static/img/image.jpg);
+    background-image: url(/static/img/images.jpg);
+    background-attachment: scroll;
+
 }
 h1{
-    font-family: sans-serif;
+    font-family: "URW Chancery L",sans-serif;
     font-size-adjust: auto;
     padding: 10px;
     align-content: center;
+    font-size: 3em;
+    color: darkred;
+    
+}
+h2{
+    font-family: "URW Chancery L",sans-serif;
     font-size: 2em;
-    color: aqua;
+    color: burlywood;
+    
+}
+h3{
+    font-size: 1.75em;
+    font-family: "URW Chancery L",sans-serif;
+    color: chocolate;
+    font-weight: bolder;
+    
+    
     
 }
 h3#ref >a:hover{
-    color: red;
+    color:black;
+}
+#home:hover{
+    color: black;
+
+}
+#home{
+    text-decoration: none;
 }
 h3#ref > a {
     text-decoration: none;
     display: inline-block;
-    color: grey;
+    color:darkred;
     text-align: center;
     align-content: center;
     margin: 20px 10px 1px 60px;
     font-weight: bold;
     font-size: 28px;
     
+    
 }
 #copy-btn:hover{
     color: 4CAF50;
     background-color: white;
 }
-#copy-btn{
+.btn{
     
     background-color: #4CAF50; /* Green */
     border: none;
@@ -47,11 +72,42 @@ h3#ref > a {
 #twitter-widget-0{
     display: inline;
     margin-top: 20px;
-    margin-left: 130px;
+    margin-left: 140px;
     font-size: 60px;
 }
 .fb-share-button {
     display: block;
     margin-top: 10px; 
-    margin-left: 130px;
+    margin-left: 140px;
 }
+#form > p{
+    display: block;
+    color:darkred;
+    margin-top: :10px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 28px;
+}
+#id_url{
+    width: 65%;
+    padding: 10px 20px;
+    margin-top: 5px;
+    margin-left: 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.error{
+			font-size: .75em;
+            width: 35%;
+            min-height: inherit;
+            font-weight: bolder;
+            font-style: oblique;
+            border: 1px solid;
+            background-color: #FFBABA;
+			background-repeat: no-repeat;
+			background-position: 10px center;
+            color: #D8000C;
+		}
