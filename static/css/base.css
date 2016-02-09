@@ -1,31 +1,27 @@
 html{
     
     margin: 20px;
-	font-family: Cambria,Georgia,serif;
-    background-image: url(/static/img/bird.jpg);
-    background-attachment: scroll;
+	font-family:"Helvetica Neue",sans-serif,serif;
+    background-image: url('/static/img/bird.jpg');
     background-size: cover;
 
 }
 h1{
-    font-family: "URW Chancery L",sans-serif;
     font-size-adjust: auto;
-    padding: 10px;
+    padding: 8px;
     align-content: center;
-    font-size: 3em;
-    color: darkred;
+    font-size: 2.5em;
+    color: #01579b;
     
 }
 h2{
-    font-family: "URW Chancery L",sans-serif;
-    font-size: 2em;
-    color: burlywood;
+    font-size: 1.75em;
+    color: #b2ebf2;
     
 }
-h3{
-    font-size: 1.75em;
-    font-family: "URW Chancery L",sans-serif;
-    color: chocolate;
+h3,h4{
+    font-size: 1.5em;
+    color: #004d40;
     font-weight: bolder;
     
     
@@ -85,19 +81,17 @@ label[for="id_url"] {
    font-size: 2em;
 }
 #form > p{
-    font: "URW Chancery L";
     display: block;
     margin-top: :10px;
     margin-bottom: 5px;
     margin-left: 20px;
     font-weight: bold;
-    font-size: 28px;
 }
 
 #id_url{
     font-size: 1.5em;
-    color: #F27935;
-    width: 65%;
+    color: #6C7A89;
+    width: 50%;
     padding: 10px 20px;
     margin-top: 50px;
     margin-left: 0;
@@ -105,14 +99,17 @@ label[for="id_url"] {
 }
 
 .error{
-			font-size: .75em;
-            width: 35%;
-            min-height: inherit;
-            font-weight: bolder;
-            font-style: oblique;
-            border: 1px solid;
-            background-color: #FFBABA;
-			background-repeat: no-repeat;
-			background-position: 10px center;
-            color: #D8000C;
-		}
+	font: "Helvetica Neue";		
+    font-size: 1em;
+    width: 35%;
+    text-align: center;
+    align-content: center;
+    font-weight: bolder;
+    font-style: oblique;
+    background-color: #D8000C;
+    top: auto;
+}
+#save{
+    
+    align-content: center;
+}
