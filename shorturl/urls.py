@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import include, url
 
 from django.contrib import admin
-
+from shortur import views as views_shortur
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$','shortur.views.index'),
-    url(r'^(?P<short_id>\w{3,6})$', 'shortur.views.redirect_org', name='redirectoriginal'),
-    url(r'^','shortur.views.notfound'),
+    url(r'^$',views_shortur.index),
+    url(r'^(?P<short_id>\w{3,6})$', views_shortur.redirect_org, name='redirectoriginal'),
+    url(r'^',views_shortur.notfound),
 ]
